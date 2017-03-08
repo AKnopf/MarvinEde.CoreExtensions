@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <Authors>Marvin Ede</Authors>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>Extends the core types like string or IEnumerable with handy methods for use of general purpose. Everything you always wanted to do just a little easier!</Description>
+    <PackageId>MarvinEde.CoreExtensions</PackageId>
+    <Copyright>MIT</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <ApplicationIcon />
+    <Win32Resource />
+    <Version>0.1.0.4</Version>
+    <AssemblyName>MarvinEde.CoreExtensions</AssemblyName>
+    <RootNamespace>MarvinEde.CoreExtensions</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp1.1\.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp1.1\MarvinEde.CoreExtensions.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Files\licence.txt" />
+    <None Remove="Files\readme.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Files\licence.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
