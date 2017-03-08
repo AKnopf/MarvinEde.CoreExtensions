@@ -7,12 +7,16 @@
     <Description>Extends the core types like string or IEnumerable with handy methods for use of general purpose. Everything you always wanted to do just a little easier!</Description>
     <PackageId>MarvinEde.CoreExtensions</PackageId>
     <Copyright>MIT</Copyright>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/AKnopf/MarvinEde.CoreExtensions/blob/master/CoreExtensions/Files/licence.txt</PackageLicenseUrl>
     <ApplicationIcon />
     <Win32Resource />
-    <Version>0.1.0.4</Version>
+    <Version>0.1.0.5</Version>
     <AssemblyName>MarvinEde.CoreExtensions</AssemblyName>
     <RootNamespace>MarvinEde.CoreExtensions</RootNamespace>
+    <RepositoryUrl>https://github.com/AKnopf/MarvinEde.CoreExtensions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/AKnopf/MarvinEde.CoreExtensions</PackageProjectUrl>
+    <AssemblyVersion>0.1.0.5</AssemblyVersion>
+    <FileVersion>0.1.0.5</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
