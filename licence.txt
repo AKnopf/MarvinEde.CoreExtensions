@@ -1,0 +1,1 @@
+﻿This software is licenced under the MIT licence. The actual licence that is shipped with the assembly can be found at ./CoreExtensions/Files

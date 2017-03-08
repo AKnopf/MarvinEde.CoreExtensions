@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreExtensions", "CoreExten
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreExtensionsTest", "CoreExtensionsTest\CoreExtensionsTest.csproj", "{80661F7E-A6D4-4E51-A653-D56D8FBA1E2D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5EFA92C5-F5E4-40A8-B136-70F7BCD304C7}"
+	ProjectSection(SolutionItems) = preProject
+		licence.txt = licence.txt
+		readme.md = readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

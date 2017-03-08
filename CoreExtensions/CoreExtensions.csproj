@@ -10,13 +10,13 @@
     <PackageLicenseUrl>https://github.com/AKnopf/MarvinEde.CoreExtensions/blob/master/CoreExtensions/Files/licence.txt</PackageLicenseUrl>
     <ApplicationIcon />
     <Win32Resource />
-    <Version>0.1.0.5</Version>
+    <Version>0.1.0.6</Version>
     <AssemblyName>MarvinEde.CoreExtensions</AssemblyName>
     <RootNamespace>MarvinEde.CoreExtensions</RootNamespace>
     <RepositoryUrl>https://github.com/AKnopf/MarvinEde.CoreExtensions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/AKnopf/MarvinEde.CoreExtensions</PackageProjectUrl>
-    <AssemblyVersion>0.1.0.5</AssemblyVersion>
-    <FileVersion>0.1.0.5</FileVersion>
+    <AssemblyVersion>0.1.0.6</AssemblyVersion>
+    <FileVersion>0.1.0.6</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -29,14 +29,10 @@
 
   <ItemGroup>
     <None Remove="Files\licence.txt" />
-    <None Remove="Files\readme.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Files\licence.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\readme.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
