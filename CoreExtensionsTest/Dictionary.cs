@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace MarvinEde.CoreExtensionsTest
 {
     [TestClass]
-    public class DictionaryTest
+    public class Dictionary
     {
 
         protected readonly IDictionary<string, int> test = new Dictionary<string, int>(){{"Present", 1}};

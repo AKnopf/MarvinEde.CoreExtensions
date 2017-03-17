@@ -1,7 +1,23 @@
 # **MarvinEde.CoreExtensions** adds handy functionality to many core types without adding any dependencies.
 
-## Concept of presence and blankness
+## Table of Contents
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:1 -->
 
+1. [Table of Contents](#table-of-contents)
+2. [Concept of presence and blankness](#concept-of-presence-and-blankness)
+3. [object](#object)
+	1. [IsIn(enumerable)](#isinenumerable)
+4. [IDictionary](#idictionary)
+	1. [Fetch(key)](#fetchkey)
+5. [Object](#object)
+	1. [Swap(a, b)](#swapa-b)
+6. [Exception](#exception)
+	1. [GetInnermostException()](#getinnermostexception)
+	2. [GetFirstInnerException<T>()](#getfirstinnerexceptiont)
+	3. [GetLastInnerException<T>()](#getlastinnerexceptiont)
+
+<!-- /TOC -->
+## Concept of presence and blankness
 To many types such as string, or IEnumerable, the methods `IsPresent()` and `IsBlank()` are added. Depending on the type you ask, this can mean different things: A collection is blank if it empty, a string is empty if it is empty or only contains white space characters or if it contains an empty JSON. For any particular object, the two methods never return the same result.
 
 ## object
@@ -38,3 +54,44 @@ You can call it in three ways:
   myDictionary.Fetch("Test", () => CalculateEveryDecimalPlaceOfPi()) // 47.11 // The expensive method will not be called
   myDictionary.Fetch("Oops", () => CalculateEveryDecimalPlaceOfPi()) // 3.14159265... // The expensive method was called
   ```
+
+## Object
+
+### Swap(a, b)
+Swaps two references, handling the temporary variable for you
+```csharp
+string a = "a";
+string b = "b";
+this.Swap(ref a, ref b);
+// a == "b"
+// b == "a"
+```
+
+
+## Exception
+
+### GetInnermostException()
+In case there are deeply nested exceptions, this methods returns the innermost exception
+```csharp
+using SysEx = System.Exception;
+var nestedException = new SysEx("1", new SysEx("2", new SysEx("3")));
+nestedException.GetInnermostException().Message // "3"
+```
+
+### GetFirstInnerException<T>()
+Looks for the first exception, that is T in the nested exceptions. Returns null if none was found.
+```csharp
+using SysEx = System.Exception;
+var differentTypeException = new System.Exception("System.Exception", new AException("a1", new BException("b", new AException("a2"))));
+differentTypeException.GetFirstInnerException<AException>().Message // "a1"
+differentTypeException.GetFirstInnerException<BException>().Message // "b1"
+```
+
+
+### GetLastInnerException<T>()
+Works just like [GetFirstInnerException<T>()](#getfirstinnerexceptiont), but looks for the last exception that is T.
+```csharp
+using SysEx = System.Exception;
+var differentTypeException = new System.Exception("System.Exception", new AException("a1", new BException("b", new AException("a2"))));
+differentTypeException.GetLastInnerException<AException>().Message // "a2"
+```

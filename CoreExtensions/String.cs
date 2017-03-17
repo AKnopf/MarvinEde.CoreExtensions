@@ -1,7 +1,7 @@
 ﻿namespace MarvinEde.CoreExtensions
 {
     /// <summary>
-    /// Static class that holds all extension methods for strings
+    /// Static class that holds all extension methods for <see cref="System.String"/>
     /// </summary>
     public static class String
     {

@@ -4,7 +4,7 @@ using System.Linq;
 namespace MarvinEde.CoreExtensions
 {
     /// <summary>
-    /// Static class that holds all extension methods for IEnumerable and IQueryable
+    /// Static class that holds all extension methods for <see cref="IEnumerable{T}"/>  and <see cref="IQueryable{T}"/>
     /// </summary>
     public static class Enumerable
     {

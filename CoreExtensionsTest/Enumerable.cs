@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace MarvinEde.CoreExtensionsTest
 {
     [TestClass]
-    public class EnumerableTest
+    public class Enumerable
     {
         protected IEnumerable<string> test = new List<string> { "Present", "AlsoPresent" };
 
