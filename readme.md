@@ -20,6 +20,8 @@
 	1. [GetInnermostException()](#getinnermostexception)
 	2. [GetFirstInnerException<T>()](#getfirstinnerexceptiont)
 	3. [GetLastInnerException<T>()](#getlastinnerexceptiont)
+9. [Stream](#stream)
+	1. [ReadBytes](#readbytes)
 
 <!-- /TOC -->
 ## Concept of presence and blankness
@@ -119,4 +121,15 @@ Works just like [GetFirstInnerException<T>()](#getfirstinnerexceptiont), but loo
 using SysEx = System.Exception;
 var differentTypeException = new System.Exception("System.Exception", new AException("a1", new BException("b", new AException("a2"))));
 differentTypeException.GetLastInnerException<AException>().Message // "a2"
+```
+
+## Stream
+### ReadBytes
+Reads the whole Stream into a byte array.
+```csharp
+byte[] bytes;
+using(var file = System.IO.File.OpenRead("path/to/file"))
+{
+    bytes = file.ReadBytes();
+}
 ```
