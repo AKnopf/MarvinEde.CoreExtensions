@@ -24,7 +24,7 @@ namespace MarvinEde.CoreExtensionsTest
         public void TestTab()
         {
             IList<int> list = new List<int>() { 1, 2, 3 };
-            int intermediateCount = list.Tab(l => l.Add(4)).Count();
+            int intermediateCount = list.Tab(l => l.Add(1)).Count();
             Assert.AreEqual(4, intermediateCount);
         }
     }
