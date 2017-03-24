@@ -1,6 +1,7 @@
 ﻿using MarvinEde.CoreExtensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MarvinEde.CoreExtensionsTest
 {
@@ -17,6 +18,14 @@ namespace MarvinEde.CoreExtensionsTest
 
             Assert.AreEqual("a", b);
             Assert.AreEqual("b", a);
+        }
+
+        [TestMethod]
+        public void TestTab()
+        {
+            IList<int> list = new List<int>() { 1, 2, 3 };
+            int intermediateCount = list.Tab(l => l.Add(4)).Count();
+            Assert.AreEqual(4, intermediateCount);
         }
     }
 }
