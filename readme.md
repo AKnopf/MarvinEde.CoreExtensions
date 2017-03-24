@@ -11,7 +11,12 @@
 	1. [Fetch(key)](#fetchkey)
 5. [Object](#object)
 	1. [Swap(a, b)](#swapa-b)
-6. [Exception](#exception)
+6. [List](#list)
+	1. [EachSlice](#eachslice)
+	2. [EachColumn](#eachcolumn)
+7. [IEnumerable](#ienumerable)
+	1. [Sum()](#sum)
+8. [Exception](#exception)
 	1. [GetInnermostException()](#getinnermostexception)
 	2. [GetFirstInnerException<T>()](#getfirstinnerexceptiont)
 	3. [GetLastInnerException<T>()](#getlastinnerexceptiont)
@@ -82,6 +87,11 @@ Iterates over a list in pairs, that do overlap. It has one overload with a funct
 List<int> list = new List<int>() {1, 2, 3, 4};
 list.EachColumn() // [Tuple[1,2], Tuple[2,3], Tuple[3,4]]
 ```
+
+## IEnumerable
+
+### Sum()
+Adds up all elements. Works for `int, long, short, double, float, BigInteger`
 
 ## Exception
 

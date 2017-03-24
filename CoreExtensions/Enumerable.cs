@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 
 namespace MarvinEde.CoreExtensions
 {
@@ -33,6 +34,7 @@ namespace MarvinEde.CoreExtensions
             return queryable.Contains(@object);
         }
 
+        #region IsBlank and IsPresent
         /// <summary>
         /// Returns true, if the <paramref name="enumerable"/> is not empty.
         /// </summary>
@@ -80,5 +82,68 @@ namespace MarvinEde.CoreExtensions
         {
             return !queryable.IsPresent();
         }
+        #endregion
+
+        #region Sum
+        /// <summary>
+        /// Adds up all elements
+        /// </summary>
+        /// <param name="enumerable"></param>
+        /// <returns></returns>
+        public static double Sum(this IEnumerable<double> enumerable)
+        {
+            return enumerable.Aggregate((accu, elem) => accu + elem);
+        }
+
+        /// <summary>
+        /// Adds up all elements
+        /// </summary>
+        /// <param name="enumerable"></param>
+        /// <returns></returns>
+        public static float Sum(this IEnumerable<float> enumerable)
+        {
+            return enumerable.Aggregate((accu, elem) => accu + elem);
+        }
+
+        /// <summary>
+        /// Adds up all elements
+        /// </summary>
+        /// <param name="enumerable"></param>
+        /// <returns></returns>
+        public static int Sum(this IEnumerable<int> enumerable)
+        {
+            return enumerable.Aggregate((accu, elem) => accu + elem);
+        }
+
+        /// <summary>
+        /// Adds up all elements
+        /// </summary>
+        /// <param name="enumerable"></param>
+        /// <returns></returns>
+        public static BigInteger Sum(this IEnumerable<BigInteger> enumerable)
+        {
+            return enumerable.Aggregate((accu, elem) => accu + elem);
+        }
+
+        /// <summary>
+        /// Adds up all elements
+        /// </summary>
+        /// <param name="enumerable"></param>
+        /// <returns></returns>
+        public static long Sum(this IEnumerable<long> enumerable)
+        {
+            return enumerable.Aggregate((accu, elem) => accu + elem);
+        }
+
+        /// <summary>
+        /// Adds up all elements
+        /// </summary>
+        /// <param name="enumerable"></param>
+        /// <returns></returns>
+        public static short Sum(this IEnumerable<short> enumerable)
+        {
+            return enumerable.Aggregate((short accu, short elem) => (short)(accu + elem));
+        }
+        #endregion
     }
 }
