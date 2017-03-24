@@ -67,6 +67,21 @@ this.Swap(ref a, ref b);
 // b == "a"
 ```
 
+## List
+
+### EachSlice
+Iterates over a list in pairs, that do not overlap. It has one overload with a function (Select) and one with an action (foreach).
+```csharp
+List<int> list = new List<int>() {1, 2, 3, 4};
+list.EachSlice() // [Tuple[1,2], Tuple[3,4]]
+```
+
+### EachColumn
+Iterates over a list in pairs, that do overlap. It has one overload with a function (Select) and one with an action (foreach).
+```csharp
+List<int> list = new List<int>() {1, 2, 3, 4};
+list.EachColumn() // [Tuple[1,2], Tuple[2,3], Tuple[3,4]]
+```
 
 ## Exception
 
